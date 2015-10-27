@@ -1,5 +1,22 @@
 /*
-*  Some useful macros to aid in using Grand Central Dispatch in Objective-C:
+*  Some useful macros to aid when using Grand Central Dispatch in Objective-C:
+*  Examples:
+*    ASYNC_MAIN({
+*        [defaults setBool:@"UpdateApp"];
+*        [defaults synchronize];
+*    });
+*    
+*    ASYNC(HIGH_PRIORITY,{
+*        <Code here>
+*    });
+*    
+*    ASYNC(DEFAULT_PRIORITY,{
+*        <Code here>
+*    });
+*    
+*    ASYNC(LOW_PRIORITY,{
+*        <Code here>
+*    });
 */
 
 #define ASYNC(PRIORITY,...) dispatch_async(dispatch_get_global_queue(PRIORITY, 0), ^{__VA_ARGS__})
