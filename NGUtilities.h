@@ -17,9 +17,23 @@
 *    ASYNC(LOW_PRIORITY,{
 *        <Code here>
 *    });
+*    
+*    SYNC(HIGH_PRIORITY,{
+*        <Code here>
+*    });
+*    
+*    SYNC(DEFAULT_PRIORITY,{
+*        <Code here>
+*    });
+*    
+*    SYNC(LOW_PRIORITY,{
+*        <Code here>
+*    });
+*
 */
 
 #define ASYNC(PRIORITY,...) dispatch_async(dispatch_get_global_queue(PRIORITY, 0), ^{__VA_ARGS__})
+#define SYNC(PRIORITY,...) dispatch_async(dispatch_get_global_queue(PRIORITY, 0), ^{__VA_ARGS__})
 #define ASYNC_MAIN(...) dispatch_async(dispatch_get_main_queue(), ^{ __VA_ARGS__ })
 #define HIGH_PRIORITY DISPATCH_QUEUE_PRIORITY_HIGH
 #define DEFAULT_PRIORITY DISPATCH_QUEUE_PRIORITY_DEFAULT
