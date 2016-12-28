@@ -28,6 +28,9 @@
 // NSUserDefaults macro simplifier
 #define defaults [NSUserDefaults standardUserDefaults]
 
+// NotificationCenter macro
+#define notificationCenter [NSNotificationCenter defaultCenter]
+
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 #define NULL_OBJECT(a) ((a) == nil || [(a) isEqual:[NSNull null]])
