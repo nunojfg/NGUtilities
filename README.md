@@ -1,3 +1,5 @@
+[![Platform](https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat)](https://github.com/nunojfg/NGUtilites)
+
 # NGUtilities
 
 NGUtilities is a header file which you easily drop into your project that adds some powerfull macros to aid in Grand Central Dispatch, NSUserDefaults, and many more to come.
